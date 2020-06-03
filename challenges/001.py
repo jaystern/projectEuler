@@ -21,4 +21,28 @@ print("1000 result:", result) # 233168
 
 
 # Thinking like Gauss 
-# 
+# Sum of 0 to 9 is the (0 + 9) + (1 + 8) + (2 + 7) + ... + (4 + 5)
+# = (count(0...9) / 2) * 9
+# = ((n + 1) / 2) * 9
+
+# So sum of all the 3's are sum(3, 6, 9, 12, ... n)
+# Can use integer division '//' to determine n
+# = sum( 3 * (1, 2, 3, 4, ... (n // 3)))
+# let m = n // 3
+# = sum( 3 * m * ((m + 1) / 2))
+
+def seriesSum(n):
+    return n * ((n + 1) / 2)
+
+def sumThreeFives(upto):
+    top = upto - 1
+    threeSum = 3 * seriesSum(top // 3)
+    fiveSum = 5 * seriesSum(top // 5)
+    fifteenSum = 15 * seriesSum(top // 15) # overlap
+    return threeSum + fiveSum - fifteenSum
+
+
+result = sumThreeFives(10)
+print(result)
+result = sumThreeFives(1000)
+print("1000 result:", result)
