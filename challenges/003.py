@@ -6,6 +6,7 @@
 
 
 # Largest prime factor. 
+# Ideas and thinking
 # Build 'up' removing non-primes and their multiples along the way. Not going to work due to having to old the full array in memory from 0..n
 # Keep an array of primes ? and check the modulo using those?
 # Work backwards from the number? (number / 3). Work up and back in tandem?
