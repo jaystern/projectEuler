@@ -19,6 +19,11 @@
 
 target = 600851475143
 # target = 13195
+# target = 10
+# target = 20
+# target = 21
+# target = 29
+# target = 1024
 primes = []
 start = 2
 nextNum = start
@@ -31,6 +36,8 @@ while True:
         target = target / nextNum
         print("found prime", nextNum, ". New target is", target)
         nextNum = start
-    nextNum += 1
+    else:
+        nextNum += 1 # could potentially increase to avoid even numbers, to reduce the number of calls. 
 
 print(primes)
+print("the largest prime is:", target)
