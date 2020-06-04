@@ -7,6 +7,9 @@
 # Ideas / thoughts
 # xyz * abc =  palindrome
 # 1111 * 1111 = 1,234,321 - why?
+# After reading the forum, a palindrome abccba can be written as
+# abc,cba = 100,000a + 10,000b + 1,000c + 100c + 10b + 1a
+# abc,cba = 100,001a + 10,010b + 1,100c
 
 # Work backwards from 999 * 999 to find panlindromic numbers, then factor them (by 3 digit numbers)? 
 # Work forwards from 100 * 100? Note that 100 * 101 means i've checked 101 * 100 too.... 
